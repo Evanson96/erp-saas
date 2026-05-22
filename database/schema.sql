@@ -209,6 +209,18 @@ CREATE TABLE audit_logs (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE sales_leads (
+  id SERIAL PRIMARY KEY,
+  company_name VARCHAR(255) NOT NULL,
+  contact_name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  phone VARCHAR(50),
+  team_size VARCHAR(50),
+  message TEXT,
+  status VARCHAR(50) DEFAULT 'new',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE INDEX idx_roles_company_id ON roles(company_id);
 CREATE INDEX idx_users_company_id ON users(company_id);
 CREATE INDEX idx_users_email ON users(email);
@@ -238,3 +250,5 @@ CREATE INDEX idx_audit_logs_company_id ON audit_logs(company_id);
 CREATE INDEX idx_audit_logs_action ON audit_logs(action);
 CREATE INDEX idx_audit_logs_entity ON audit_logs(entity_type, entity_id);
 CREATE INDEX idx_audit_logs_created_at ON audit_logs(created_at);
+CREATE INDEX idx_sales_leads_email ON sales_leads(email);
+CREATE INDEX idx_sales_leads_created_at ON sales_leads(created_at);

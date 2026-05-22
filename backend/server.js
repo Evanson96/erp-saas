@@ -15,6 +15,8 @@ const billingRoutes = require("./routes/billingRoutes");
 const staffRoutes = require("./routes/staffRoutes");
 const purchaseRoutes = require("./routes/purchaseRoutes");
 const auditRoutes = require("./routes/auditRoutes");
+const reportRoutes = require("./routes/reportRoutes");
+const leadRoutes = require("./routes/leadRoutes");
 require("dotenv").config();
 
 validateEnv();
@@ -64,6 +66,8 @@ app.use("/api/billing", billingRoutes);
 app.use("/api/staff", staffRoutes);
 app.use("/api/purchases", purchaseRoutes);
 app.use("/api/audit-logs", auditRoutes);
+app.use("/api/reports", reportRoutes);
+app.use("/api/leads", leadRoutes);
 
 app.get("/", (req, res) => {
   res.status(200).send("ERP SaaS API Running");

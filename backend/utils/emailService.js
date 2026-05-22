@@ -121,10 +121,28 @@ const sendPaymentReceiptEmail = async ({ customerEmail, customerName, payment, i
   });
 };
 
+const sendSalesLeadEmail = async ({ lead, to }) => {
+  return sendEmail({
+    to,
+    subject: `New ERP SaaS demo request: ${lead.company_name}`,
+    text: `${lead.contact_name} from ${lead.company_name} requested a demo. Email: ${lead.email}. Phone: ${lead.phone || "Not provided"}. Team size: ${lead.team_size || "Not provided"}. Message: ${lead.message || "No message"}.`,
+    html: `
+      <h2>New demo request</h2>
+      <p><strong>Company:</strong> ${lead.company_name}</p>
+      <p><strong>Contact:</strong> ${lead.contact_name}</p>
+      <p><strong>Email:</strong> ${lead.email}</p>
+      <p><strong>Phone:</strong> ${lead.phone || "Not provided"}</p>
+      <p><strong>Team size:</strong> ${lead.team_size || "Not provided"}</p>
+      <p><strong>Message:</strong> ${lead.message || "No message"}</p>
+    `,
+  });
+};
+
 module.exports = {
   sendCustomerWelcomeEmail,
   sendCustomerOrderConfirmationEmail,
   sendCompanyNewOrderEmail,
   sendInvoiceEmail,
   sendPaymentReceiptEmail,
+  sendSalesLeadEmail,
 };
