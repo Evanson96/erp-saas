@@ -157,17 +157,17 @@ function Dashboard() {
   };
 
   return (
-    <main className="min-h-screen bg-[#eef3f7] text-slate-900">
+    <main className="min-h-screen bg-[#f2f6f3] text-slate-900">
       <div className="flex min-h-screen">
         <aside className="hidden w-72 border-r border-slate-200 bg-white md:block">
           <div className="border-b border-slate-200 px-6 py-6">
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-teal-700 text-white">
+              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#1b7f35] text-white">
                 <BarChart3 size={22} />
               </div>
               <div>
-                <h1 className="text-lg font-semibold text-slate-950">ERP SaaS</h1>
-                <p className="text-xs font-medium text-slate-500">Operations suite</p>
+                <h1 className="text-lg font-semibold text-slate-950">ERP SaaS Kenya</h1>
+                <p className="text-xs font-medium text-slate-500">KES operations suite</p>
               </div>
             </div>
           </div>
@@ -185,7 +185,7 @@ function Dashboard() {
               <NavLink
                 className={({ isActive }) =>
                   `flex items-center gap-3 rounded-md px-3 py-2.5 font-medium ${
-                    isActive ? "bg-teal-50 text-teal-800" : "text-slate-600 hover:bg-slate-100 hover:text-slate-950"
+                    isActive ? "bg-emerald-50 text-[#1b7f35]" : "text-slate-600 hover:bg-slate-100 hover:text-slate-950"
                   }`
                 }
                 key={label}
@@ -197,10 +197,10 @@ function Dashboard() {
             ))}
           </nav>
 
-          <div className="mx-4 mt-4 rounded-lg border border-slate-200 bg-slate-50 p-4">
-            <p className="text-sm font-semibold text-slate-900">Tenant secured</p>
+          <div className="mx-4 mt-4 rounded-lg border border-emerald-100 bg-emerald-50 p-4">
+            <p className="text-sm font-semibold text-slate-900">Kenya-ready workspace</p>
             <p className="mt-2 text-xs leading-5 text-slate-600">
-              Every request is scoped to your company ID from the JWT token.
+              Tenant-scoped records, KES reporting, and payment tracking for local operations.
             </p>
           </div>
         </aside>
@@ -236,10 +236,10 @@ function Dashboard() {
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-wide text-teal-300">Today overview</p>
                   <h3 className="mt-3 text-3xl font-semibold leading-tight">
-                    Keep sales, stock, and customers moving from one command center.
+                    Keep Kenyan sales, stock, payments, and customers moving from one command center.
                   </h3>
                   <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-300">
-                    Your dashboard now reflects live tenant data from PostgreSQL and highlights the operational work that needs attention.
+                    Your dashboard reflects live PostgreSQL data and highlights the daily operational work your team needs to act on.
                   </p>
                 </div>
 

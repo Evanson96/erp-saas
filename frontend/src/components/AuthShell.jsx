@@ -5,9 +5,9 @@ function AuthShell({ children, eyebrow, title, description }) {
         <section className="relative hidden overflow-hidden bg-slate-950 px-10 py-12 text-white lg:flex lg:flex-col lg:justify-between">
           <div className="absolute inset-0 opacity-40">
             <img
-              alt="Modern warehouse operations dashboard"
+              alt="Kenyan SME warehouse operations dashboard"
               className="h-full w-full object-cover"
-              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80"
+              src="/images/kenya-erp-hero.png"
             />
           </div>
           <div className="absolute inset-0 bg-slate-950/75" />
@@ -15,13 +15,13 @@ function AuthShell({ children, eyebrow, title, description }) {
           <div className="relative z-10">
             <div className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/10 px-3 py-2 text-sm font-semibold backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-emerald-400" />
-              Multi-tenant ERP platform
+              Built for Kenyan SMEs
             </div>
             <h1 className="mt-8 max-w-xl text-4xl font-semibold leading-tight text-white">
-              Run inventory, customers, and sales from one secure workspace.
+              Run stock, sales, billing, and customer orders from one secure workspace.
             </h1>
             <p className="mt-5 max-w-lg text-base leading-7 text-slate-200">
-              Built for companies that need clean operations, tenant-separated data, and fast daily workflows.
+              Designed for distributors, retailers, wholesalers, service teams, and growing businesses across Kenya.
             </p>
           </div>
 
@@ -53,7 +53,7 @@ function AuthShell({ children, eyebrow, title, description }) {
               {[
                 ["Inventory synced", "91%"],
                 ["Orders fulfilled", "76%"],
-                ["Payments posted", "64%"],
+                ["KES payments posted", "64%"],
               ].map(([label, value]) => (
                 <div className="grid grid-cols-[132px_1fr_44px] items-center gap-3 text-sm" key={label}>
                   <span className="text-slate-300">{label}</span>
